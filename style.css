@@ -1,0 +1,123 @@
+h1{
+	font-size: 20px;
+}
+h2{
+	font-size: 18px;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	margin: 15px;
+}
+p{
+	letter-spacing: 0.07em;
+	margin-bottom: 15px;
+}
+
+.content{
+	margin: auto;
+	max-width: 1170px;
+	background: #FFFFFF;
+	color: #333333;
+	display: flex;
+	flex-direction: column;
+}
+
+.header_content {
+	 height: 15vh;
+	 background: #2C3E50;
+	 color: #FFFFFF;
+	 font-family: "Raleway", sans-serif;
+	 border-radius: 0 0 10px 10px;
+	 display: flex;
+    align-items: center;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    justify-content: space-around;
+}
+
+.header_content ul{
+	display: flex;
+}
+.header_content li{
+	margin-left: 20px;
+}
+.header_content a{
+	color: #FFFFFF;
+}
+.header_content a:hover{
+	Transform: scale(0.95, 0.95);
+   background: rgba(217, 217, 217, 0.8);
+   border-radius: 5px;
+   padding: 2px;
+}
+.description img{
+	max-width: 40%;
+	margin: 15px;
+	border-radius: 10px;
+}
+.desc_img{
+	text-align: center;
+}
+
+section{
+	margin-top: 15px;
+	background: #F2F2F2;
+	border-radius: 10px;
+	border: 2px solid #AFAFAF;
+	padding: 10px;
+}
+
+.main_content{
+	font-family: "Montserrat", sans-serif;
+}
+
+.terms{
+	margin-left: 20px;
+}
+.term ol{
+	margin-left: 15px;
+}
+.comparison{
+	display: flex;
+	justify-content: space-around;
+}
+
+.compar_element{
+	padding: 20px;
+	border-radius: 20px;
+	text-align: center;
+}
+.compar_element .list ul{
+	display: flex;
+	flex-direction: column;
+}
+
+.compar_element:nth-child(1){
+	border: 2px solid rgba(255, 100, 100, 0.7);
+}
+.compar_element:nth-child(2){
+	border: 2px solid rgba(100, 255, 100, 0.7);
+}
+
+.compar_element .list ul li{
+	margin-bottom: 15px;
+}
+
+.list_videos iframe{
+	width: 560px;
+	height: 315px;
+}
+
+.footer_content{
+	margin-top: 15px;
+	background: #333333;
+	color:  #FFFFFF;
+	font-family: "Lato", sans-serif;
+
+	 height: 15vh;
+	 border-radius: 10px 10px 0 0 ;
+	 display: flex;
+    align-items: center;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    justify-content: space-around;
+}

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="zero_style.css">
+	<link rel="stylesheet" href="style.css">
+	<title>UDP</title>
+</head>
+<body>
+	<div class="content">
+		<header>
+			<div class="header_content">
+				<h1>UDP</h1>
+				<nav>
+					<div class="menu">
+						<ul>
+							<li><a href="#desc">Описание</a></li>
+							<li><a href="#terms">Основные термины</a></li>
+							<li><a href="#compair">Недостатки/Преимущества</a></li>
+							<li><a href="#videos">Видео</a></li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</header>
+		<main>
+			<div class="main_content">
+				<section>
+					<div class="description" id="desc">
+						<h2>
+							User Datagram Protocol
+						</h2>
+						<p>
+							простой, ориентированный на дейтаграммы протокол без организации соединения, 
+							предоставляющий быстрое, но необязательно надежное транспортное обслуживание. 
+							Он поддерживает взаимодействия "один со многими" и поэтому часто применяется 
+							для широковещательной и групповой передачи дейтаграмм.
+						</p>
+						<p>
+							Internet Protocol (IP) является основным протоколом Интернета. 
+							Transmission Control Protocol (TCP) и UDP — это протоколы транспортного уровня, 
+							построенные поверх лежащего в основе протокола.
+						</p>
+						<p>
+							TCP/IP — это набор протоколов, называемый также "пакетом протоколов Интернета" 
+							(Internet Protocol Suite), состоящий из четырех уровней. 
+							Запомните, что TCP/IP не просто один протокол, а семейство или набор протоколов, 
+							который состоит из других низкоуровневых протоколов, таких, как IP, TCP и UDP. UDP 
+							располагается на транспортном уровне поверх IP (протокола сетевого уровня). 
+							Транспортный уровень обеспечивает взаимодействие между сетями через шлюзы. 
+							В нем используются IP-адреса для отправки пакетов данных через Интернет или другую 
+							сеть с помощью разнообразных драйверов устройств.
+						</p>
+						<p class="desc_img">
+						<img src="src/exampl_UDP.jpg" alt="Схема UDP">
+						</p>
+					</div>
+				</section>
+				<section>
+					<div class="terms" id="terms">
+						<div class="term">
+							<h2>Пакеты</h2>
+							<p>
+								В передаче данных пакетом называется последовательность двоичных цифр, 
+								представляющих данные и управляющие сигналы, которые передаются и коммутируются 
+								через хост. Внутри пакета эта информация расположена в соответствии со специальным форматом.
+							</p>
+						</div>
+
+						<div class="term">
+							<h2>Дейтаграммы</h2>
+							<p>
+								Дейтаграмма — это отдельный, независимый пакет данных, несущий информацию, 
+								достаточную для передачи от источника до пункта назначения, поэтому никакого 
+								дополнительного обмена между источником, адресатом и транспортной сетью не требуется.
+							</p>
+						</div>
+
+						<div class="term">
+							<h2>MTU (Maximum Transmission Unit)</h2>
+							<p>
+								MTU характеризует канальный уровень и соответствует максимальному числу байтов, 
+								которое можно передать в одном пакете. Другими словами MTU — это самый большой пакет, 
+								который может переносить данная сетевая среда. Например, Ethernet имеет фиксированный 
+								MTU, равный 1500 байтам. В UDP, если размер дейтаграммы больше MTU, протокол IP выполняет 
+								фрагментацию, разбивая дейтаграмму на более мелкие части (фрагменты) так, чтобы каждый 
+								фрагмент был меньше MTU.
+							</p>
+						</div>
+
+						<div class="term">
+							<h2>Порты</h2>
+							<p>
+								Чтобы поставить в соответствие входящим данным конкретный процесс, 
+								выполняемый в компьютере, UDP использует порты. UDP направляет пакет 
+								в соответствующее место, используя номер порта, указанный в UDP-заголовке дейтаграммы. 
+								Порты представлены 16-битными номерами и, следовательно, принимает значения 
+								в диапазоне от 0 до 65 535. Порты, которые также называют конечными точками 
+								логических соединений, разделены на три категории:
+							</p>
+							<ol>
+								<li>Хорошо известные порты - от 0 до 1023</li>
+								<li>Регистрируемые порты — от 1024 до 49151</li>
+								<li>Динамические / частные порты — от 49152 до 65535</li>
+							</ol>
+						</div>
+					</div>
+				</section>
+				<section>
+					<div class="comparison" id="compair">
+						<div class="compar_element">
+							<h2>Недостатки</h2>
+							<div class="list disadvantages">
+								<ul>
+									<li>Отсутствие сигналов квитирования.</li>
+									<li>Использование сессий.</li>
+									<li>Надежность.</li>
+									<li>Безопасность.</li>
+									<li>Управление потоком.</li>
+								</ul>
+							</div>
+						</div>
+						<div class="compar_element">
+							<h2>Преимущества</h2>
+							<div class="list advantages">
+								<ul>
+									<li>Нет установки соединения.</li>
+									<li>Скорость.</li>
+									<li>Топологическое разнообразие.</li>
+									<li>Накладные расходы.</li>
+									<li>Размер заголовка.</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section>
+					<div class="videos" id="videos">
+						<h2>Несколько полезных видео</h2>
+
+						<div class="list_videos">
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/GBrLfZvRrd8" 
+							title="YouTube video player" frameborder="0" 
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; 
+							web-share" allowfullscreen>
+							</iframe>
+
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/RkvC3XS07Y0" 
+							title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+							encrypted-media; gyroscope; picture-in-picture; 
+							web-share" allowfullscreen>
+							</iframe>
+
+							<iframe width="853" height="480" src="https://www.youtube.com/embed/3IkI2xT5zHs" 
+							title="UDP (User Datagram Protocol)" frameborder="0" allow="accelerometer; autoplay; 
+							clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+							</iframe>
+
+							<iframe width="748" height="419" src="https://www.youtube.com/embed/eKySjjLZKF0" 
+							title="UDP - User Datagram Protocol" frameborder="0" 
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
+							picture-in-picture; web-share" allowfullscreen>
+							</iframe>
+						</div>
+					</div>
+				</section>
+			</div>
+		</main>
+		<footer>
+			<div class="footer_content">
+				<p>Задание выполнил: Железнев Дмитрий</p>
+				<p>Группа: М-55</p>
+				<p>Дата:18.02.2023</p>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>
